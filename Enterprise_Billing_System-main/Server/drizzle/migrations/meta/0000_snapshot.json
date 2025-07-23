@@ -1,0 +1,1181 @@
+{
+  "id": "7b876a19-071f-4c9f-8e67-ec3b9d131378",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.bill": {
+      "name": "bill",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "billnumber": {
+          "name": "billnumber",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "orderno": {
+          "name": "orderno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "billdate": {
+          "name": "billdate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "duedate": {
+          "name": "duedate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "terms": {
+          "name": "terms",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "modeofshipment": {
+          "name": "modeofshipment",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "itemdetails": {
+          "name": "itemdetails",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gst": {
+          "name": "gst",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total": {
+          "name": "total",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.creditnote": {
+      "name": "creditnote",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "creditno": {
+          "name": "creditno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "refno": {
+          "name": "refno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "creditdate": {
+          "name": "creditdate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "itemdetails": {
+          "name": "itemdetails",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "subject": {
+          "name": "subject",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "notes": {
+          "name": "notes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "terms": {
+          "name": "terms",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "salesperson": {
+          "name": "salesperson",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taxtype": {
+          "name": "taxtype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taxrate": {
+          "name": "taxrate",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "amount": {
+          "name": "amount",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.customer": {
+      "name": "customer",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "type": {
+          "name": "type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "company": {
+          "name": "company",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "dispname": {
+          "name": "dispname",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mail": {
+          "name": "mail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "workphone": {
+          "name": "workphone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mobilephone": {
+          "name": "mobilephone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "panno": {
+          "name": "panno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gstno": {
+          "name": "gstno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "currency": {
+          "name": "currency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "openingbalance": {
+          "name": "openingbalance",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "paymentterms": {
+          "name": "paymentterms",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "billaddress": {
+          "name": "billaddress",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "shipaddress": {
+          "name": "shipaddress",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.estimate": {
+      "name": "estimate",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "cname": {
+          "name": "cname",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quotenum": {
+          "name": "quotenum",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "refnum": {
+          "name": "refnum",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "qdate": {
+          "name": "qdate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "expdate": {
+          "name": "expdate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "project": {
+          "name": "project",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "itemtable": {
+          "name": "itemtable",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "subject": {
+          "name": "subject",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "salesperson": {
+          "name": "salesperson",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taxtype": {
+          "name": "taxtype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taxrate": {
+          "name": "taxrate",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total": {
+          "name": "total",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.inventory": {
+      "name": "inventory",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "item_name": {
+          "name": "item_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "item_code": {
+          "name": "item_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hsn_code": {
+          "name": "hsn_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rate": {
+          "name": "rate",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gst": {
+          "name": "gst",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.invoice": {
+      "name": "invoice",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "phone": {
+          "name": "phone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mail": {
+          "name": "mail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "invoiceid": {
+          "name": "invoiceid",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "invdate": {
+          "name": "invdate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "duedate": {
+          "name": "duedate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "terms": {
+          "name": "terms",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "subject": {
+          "name": "subject",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "salesperson": {
+          "name": "salesperson",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taxtype": {
+          "name": "taxtype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taxrate": {
+          "name": "taxrate",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "amount": {
+          "name": "amount",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.items": {
+      "name": "items",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "type": {
+          "name": "type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "unit": {
+          "name": "unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "itemCode": {
+          "name": "itemCode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hsnCode": {
+          "name": "hsnCode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "salesprice": {
+          "name": "salesprice",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "costprice": {
+          "name": "costprice",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "salesdescription": {
+          "name": "salesdescription",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "purchasedescription": {
+          "name": "purchasedescription",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "salesaccount": {
+          "name": "salesaccount",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "purchaseaccount": {
+          "name": "purchaseaccount",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taxPayable": {
+          "name": "taxPayable",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gst": {
+          "name": "gst",
+          "type": "numeric(5, 2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "quantity": {
+          "name": "quantity",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "openingStock": {
+          "name": "openingStock",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.project": {
+      "name": "project",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pcode": {
+          "name": "pcode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cname": {
+          "name": "cname",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "billmethod": {
+          "name": "billmethod",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total": {
+          "name": "total",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "costbudget": {
+          "name": "costbudget",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "revenuebudget": {
+          "name": "revenuebudget",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "projecthours": {
+          "name": "projecthours",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "users": {
+          "name": "users",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tasks": {
+          "name": "tasks",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.purchaseorder": {
+      "name": "purchaseorder",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "delivery": {
+          "name": "delivery",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "orderno": {
+          "name": "orderno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ref": {
+          "name": "ref",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "date": {
+          "name": "date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "deliverydate": {
+          "name": "deliverydate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "terms": {
+          "name": "terms",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "modeofshipment": {
+          "name": "modeofshipment",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "itemdetails": {
+          "name": "itemdetails",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gst": {
+          "name": "gst",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total": {
+          "name": "total",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.salesorder": {
+      "name": "salesorder",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "caddress": {
+          "name": "caddress",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "contact": {
+          "name": "contact",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mail": {
+          "name": "mail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "invoiceid": {
+          "name": "invoiceid",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "orderno": {
+          "name": "orderno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "orderdate": {
+          "name": "orderdate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "shipmentdate": {
+          "name": "shipmentdate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "invoicedate": {
+          "name": "invoicedate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "duedate": {
+          "name": "duedate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "terms": {
+          "name": "terms",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "itemdetails": {
+          "name": "itemdetails",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "subject": {
+          "name": "subject",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "salesperson": {
+          "name": "salesperson",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taxtype": {
+          "name": "taxtype",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taxrate": {
+          "name": "taxrate",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total": {
+          "name": "total",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.salesperson": {
+      "name": "salesperson",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mail": {
+          "name": "mail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mail": {
+          "name": "mail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "name": "password",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "address": {
+          "name": "address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "phone": {
+          "name": "phone",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gst": {
+          "name": "gst",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pan": {
+          "name": "pan",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "docs": {
+          "name": "docs",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "users_name_unique": {
+          "name": "users_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        },
+        "users_mail_unique": {
+          "name": "users_mail_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "mail"
+          ]
+        }
+      }
+    },
+    "public.vendor": {
+      "name": "vendor",
+      "schema": "",
+      "columns": {
+        "sno": {
+          "name": "sno",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "company": {
+          "name": "company",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "dispname": {
+          "name": "dispname",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mail": {
+          "name": "mail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "workphone": {
+          "name": "workphone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mobilephone": {
+          "name": "mobilephone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "panno": {
+          "name": "panno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gstno": {
+          "name": "gstno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "currency": {
+          "name": "currency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "openingbalance": {
+          "name": "openingbalance",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "paymentterms": {
+          "name": "paymentterms",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "billaddress": {
+          "name": "billaddress",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "shipaddress": {
+          "name": "shipaddress",
+          "type": "json",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loggedUser": {
+          "name": "loggedUser",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

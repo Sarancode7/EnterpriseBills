@@ -1,0 +1,142 @@
+.estimate-container {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group select {
+  width: 40%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-group select:hover {
+  border-color: #222324; 
+  background-color: #f0f8ff; 
+  color: #1d1d1e;
+}
+
+.form-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6); 
+}
+
+.form-group select option {
+  padding: 10px;
+  background-color: #fff;
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-group select option:hover {
+  background-color: #5e97d1;
+  color: white;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.items-section {
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.items-section table {
+  background-color: #f0f0f0; 
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.items-section th,
+.items-section td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.items-section td {
+  cursor: pointer;
+}
+
+.items-section td:hover {
+  background-color: #d9e4e7;
+}
+
+.items-section input {
+  width: 100%;
+  padding: 6px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.actions button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #0056b3;
+}
+
+.subtotal-section {
+  margin-top: 40px;
+}
+
+.subtotal-container {
+  background-color: #f0f0f0; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subtotal-container .form-group {
+  margin-bottom: 10px;
+}
+
+.subtotal-container .summary {
+  margin-top: 20px;
+}
+
+.subtotal-container .summary div {
+  font-weight: bold;
+  font-size: 18px;
+  color: #353636;
+}

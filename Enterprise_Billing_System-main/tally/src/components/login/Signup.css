@@ -1,0 +1,10 @@
+/* Prevent autofill color changes */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important; /* Change 'white' to match the background */
+  -webkit-text-fill-color: #000000 !important; /* Keep the text color consistent */
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #000000 !important;
+}
