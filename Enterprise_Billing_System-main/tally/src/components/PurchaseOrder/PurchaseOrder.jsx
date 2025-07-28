@@ -54,7 +54,7 @@ const PurchaseOrder = () => {
     }, []);
     const fetchVendors = async (loggedUser) => {
         try {
-            const response = await fetch('https://enterprisebillingsystem.onrender.com/api/vendor', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/vendor`, {
                 params: { loggedUser }
             });
             const data = await response.json();
@@ -124,7 +124,7 @@ const PurchaseOrder = () => {
         const data = { ...orderData, loggedUser }
 
         try {
-            const response = await fetch('https://enterprisebillingsystem.onrender.com/api/purchaseorder', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/purchaseorder`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
